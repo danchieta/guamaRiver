@@ -1,4 +1,5 @@
-% Created 2010 by Sarah Merz <smerz@pacific.edu>
+% Created 2016 by David C. Anchieta
+% Based on the work from 2010 by Sarah Merz <smerz@pacific.edu>
 %
 % This file may be distributed and/or modified
 %
@@ -24,7 +25,8 @@
 
 %\beamertemplatenavigationsymbolsempty  %removes navigation bar
 
-\definecolor{pacificorange}{cmyk}{.59,.0,.69,.22} %approved Pacific colors 2010
+\definecolor{defaultcolor}{cmyk}{.59,.0,.69,.22} %approved Pacific colors 2010
+\definecolor{defaultcolor}{cmyk}{.59,.0,.69,.22} %approved Pacific colors 2010
 \definecolor{pacificgray}{cmyk}{0,.15,.35,.60}
 \definecolor{pacificlgray}{cmyk}{0,0,.2,.4}
 \definecolor{pacificcream}{cmyk}{.05,.05,.15,0}
@@ -40,62 +42,69 @@
 \definecolor{deepblue}{cmyk}{1,.57,0,2}
 \definecolor{turquoise}{cmyk}{.43,0,.24,0}
 
-
+\setbeamertemplate{itemize item}{$\bullet$}
 
 \usecolortheme{whale}
 \usecolortheme{orchid}
-\usecolortheme[named=pacificorange]{structure} %replaces the blue of Copenhagen with Pacific orange
+\usecolortheme[named=defaultcolor]{structure} %replaces the blue of Copenhagen with Pacific orange
 
 
-\setbeamercolor{frametitle}{fg=pacificorange}
+\setbeamercolor{frametitle}{fg=defaultcolor}
 
 %\setbeamerfont{block title}{size={}}
-
-\newcommand{\orangebox}[2]{
-\setbeamercolor{uppercol}{fg=white,bg=pacificorange}
-\setbeamercolor{lowercol}{fg=black,bg=pacificcream}
-
-\begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=true]{
-#1 }  #2
-\end{beamerboxesrounded} }
-
-
-\newcommand{\greenbox}[2]{
+%My new environment is Here
+%==========================
+\newenvironment{greenbox}[1]
+{
 \setbeamercolor{uppergrn}{fg=white,bg=pacificgreen}
 \setbeamercolor{lowercol}{fg=black,bg=pacificcream}
+\begin{beamerboxesrounded}[upper=uppergrn,lower=lowercol,shadow=true]{#1}
+}
+{
+\end{beamerboxesrounded} 
+}
 
-\begin{beamerboxesrounded}[upper=uppergrn,lower=lowercol,shadow=true]{
-#1 }  #2
-\end{beamerboxesrounded} }
+\newenvironment{orangebox}[1]
+{
+\setbeamercolor{uppercol}{fg=white,bg=defaultcolor}
+\setbeamercolor{lowercol}{fg=black,bg=pacificcream}
 
-\newcommand{\bluebox}[2]{
+\begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=true]{#1}
+}
+{
+\end{beamerboxesrounded}
+}
+
+\newenvironment{bluebox}[1]
+{
 \setbeamercolor{upperblue}{fg=white,bg=pacificblue}
 \setbeamercolor{lowercol}{fg=black,bg=pacificcream}
+\setbeamertemplate{itemize item}{\textcolor{pacificblue}{$\bullet$}}
+\begin{beamerboxesrounded}[upper=upperblue,lower=lowercol,shadow=false]{#1}
+}
+{
+\end{beamerboxesrounded}
+}
 
-\begin{beamerboxesrounded}[upper=upperblue,lower=lowercol,shadow=true]{
-#1 }  #2
-\end{beamerboxesrounded} }
-
-\newcommand{\graybox}[2]{
+\newenvironment{graybox}[1]
+{
 \setbeamercolor{uppergray}{fg=white,bg=pacificgray}
 \setbeamercolor{lowercol}{fg=black,bg=pacificcream}
+\begin{beamerboxesrounded}[upper=uppergray,lower=lowercol,shadow=true]{#1}
+}
+{
+\end{beamerboxesrounded}
+}
 
-\begin{beamerboxesrounded}[upper=uppergray,lower=lowercol,shadow=true]{
-#1 }  #2
-\end{beamerboxesrounded} }
-
-\newcommand{\grassgreenbox}[2]{
+\newenvironment{grassgreenbox}[1]
+{
 \setbeamercolor{uppergrass}{fg=white,bg=grassgreen}
 \setbeamercolor{lowercol}{fg=black,bg=pacificcream}
-
-\begin{beamerboxesrounded}[upper=uppergrass,lower=lowercol,shadow=true]{
-#1 }  #2
-\end{beamerboxesrounded} }
-
-
-\newenvironment{orangeitemize}{\setbeamertemplate{itemize item}{$\bullet$}\begin{itemize}}{\end{itemize}}
-\newenvironment{grassgreenitemize}{\setbeamertemplate{itemize item}{\textcolor{grassgreen}{$\bullet$}} \begin{itemize}}{\end{itemize}}
-\newenvironment{blackitemize}{\setbeamertemplate{itemize item}{\textcolor{black}{$\bullet$}} \begin{itemize}}{\end{itemize}}
+\begin{beamerboxesrounded}[upper=uppergrass,lower=lowercol,shadow=true]{#1}
+}
+{
+\end{beamerboxesrounded} 
+}
 
 \mode
 <all>
