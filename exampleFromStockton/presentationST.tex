@@ -4,8 +4,8 @@
 \usepackage{helvet}
 \usepackage{listings}
 \usepackage{algorithm2e}
-\usetheme{CambridgeUS}
-\usepackage{myPkgTest}
+%\usetheme{CambridgeUS}
+\usepackage{beamerthemeStockton}
 
 %\usecolortheme{whale}
 
@@ -29,6 +29,18 @@
 	%========================================================================
 	\section{Single tone case}
 	\begin{frame}{Estimating frequency and amplitude of a single tone}
+		\begin{theorem}
+			How you have fallen from heaven,
+			
+			morning star, son of the dawn!
+			
+		You have been cast down to the earth,
+
+			you who once laid low the nations!
+			Isaiah 14:12
+		\end{theorem}
+		
+	\end{frame}\begin{frame}{Estimating frequency and amplitude of a single tone}
 		Given a complex sinusoid defined by:
 		\begin{equation*}
 			r(t) = A_{1}e^{j2\pi f_1 t} + z(t)
@@ -55,14 +67,7 @@
 		\end{gather*}
 	\end{frame}
 	
-	\begin{frame}{Estimating frequency and amplitude of a single tone}
-		\begin{figure}
-			\centering
-			\includegraphics[scale=0.375]{./img3/singleTonewoMHFig2.eps}
-			\includegraphics[scale=0.375]{./img3/singleTonewoMHFig3.eps}
-			\caption{Discrete-time Fourier Transform and power spectral density of the signal with added noise.}
-		\end{figure}
-	\end{frame}
+	
 	
 	%========================================================================
 	%I START TO TALK ABOUT PDF'S HERE
@@ -81,14 +86,6 @@
 		\end{gather*}
 	\end{frame}
 	
-	\begin{frame}{Defining the PDF of the frequency}
-		\begin{figure}
-			\centering
-			\includegraphics[scale=0.345]{./img3/singleTonewoMHFig11.eps}
-			\includegraphics[scale=0.345]{./img3/singleTonewoMHFig12.eps}
-			\caption{PDF of the frequency conditioned on the MLE of the amplitude.}
-		\end{figure}
-	\end{frame}	
 	
 
 	
