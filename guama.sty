@@ -1,5 +1,4 @@
-% Created 2016 by David C. Anchieta
-% Based on the work from 2010 by Sarah Merz <smerz@pacific.edu>
+% Copyright 2007 by Till Tantau
 %
 % This file may be distributed and/or modified
 %
@@ -7,104 +6,25 @@
 % 2. under the GNU Public License.
 %
 % See the file doc/licenses/LICENSE for more details.
-%
-%place this file in the same folder with beamerthemeCopenhagen.sty for example
-
-
-
-%\orangebox{text1}{text2} creates a theorem-like box, pacific orange on top containing text1 and pacificcream on bottom containing text2
-%similarly use \greenbox, \bluebox, \graybox
 
 \mode<presentation>
 
-%\useoutertheme{split}
-%\useinnertheme{rounded}
-\usetheme{cambridgeUS}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75!black}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=structure.fg!50!black}
+\setbeamercolor*{palette quaternary}{fg=white,bg=black}
 
+\setbeamercolor*{sidebar}{use=structure,bg=structure.fg}
+  
+\setbeamercolor*{palette sidebar primary}{use=structure,fg=structure.fg!10}
+\setbeamercolor*{palette sidebar secondary}{fg=white}
+\setbeamercolor*{palette sidebar tertiary}{use=structure,fg=structure.fg!50}
+\setbeamercolor*{palette sidebar quaternary}{fg=white}
 
+\setbeamercolor*{titlelike}{parent=palette primary}
 
-%\beamertemplatenavigationsymbolsempty  %removes navigation bar
-
-\definecolor{defaultcolor}{cmyk}{.59,.0,.69,.22} %approved Pacific colors 2010
-\definecolor{pacificgray}{cmyk}{0,.15,.35,.60}
-\definecolor{pacificlgray}{cmyk}{0,0,.2,.4}
-\definecolor{pacificcream}{cmyk}{.05,.05,.15,0}
-\definecolor{deepyellow}{cmyk}{0,.17,.80,0}
-\definecolor{lightblue}{cmyk}{.49,.01,0,0}
-\definecolor{lightbrown}{cmyk}{.09,.15,.34,0}
-\definecolor{deepviolet}{cmyk}{.79,1,0,.15}
-\definecolor{deeporange}{cmyk}{0,.59,1,18}
-\definecolor{dustyred}{cmyk}{0,.7,.45,.4}
-\definecolor{grassgreen}{RGB}{92,135,39}
-\definecolor{pacificblue}{RGB}{59,110,143}
-\definecolor{pacificgreen}{cmyk}{.15,0,.45,.30}
-\definecolor{deepblue}{cmyk}{1,.57,0,2}
-\definecolor{turquoise}{cmyk}{.43,0,.24,0}
-\definecolor{isabelline}{rgb}{0.96, 0.94, 0.93}
-
-\setbeamertemplate{itemize item}{$\bullet$}
-
-\usecolortheme{whale}
-%\usecolortheme{orchid}
-\usecolortheme[named=defaultcolor]{structure} %replaces the blue of Copenhagen with Pacific orange
-
-
-\setbeamercolor{frametitle}{bg=isabelline, fg=defaultcolor}
-
-%\setbeamerfont{block title}{size={}}
-%My new environment is Here
-%==========================
-\newenvironment{greenbox}[1]
-{
-\setbeamercolor{uppergrn}{fg=white,bg=pacificgreen}
-\setbeamercolor{lowercol}{fg=black,bg=pacificcream}
-\begin{beamerboxesrounded}[upper=uppergrn,lower=lowercol,shadow=true]{#1}
-}
-{
-\end{beamerboxesrounded} 
-}
-
-\newenvironment{orangebox}[1]
-{
-\setbeamercolor{uppercol}{fg=white,bg=defaultcolor}
-\setbeamercolor{lowercol}{fg=black,bg=pacificcream}
-
-\begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=true]{#1}
-}
-{
-\end{beamerboxesrounded}
-}
-
-\newenvironment{bluebox}[1]
-{
-\setbeamercolor{upperblue}{fg=white,bg=pacificblue}
-\setbeamercolor{lowercol}{fg=black,bg=pacificcream}
-\setbeamertemplate{itemize item}{\textcolor{pacificblue}{$\bullet$}}
-\begin{beamerboxesrounded}[upper=upperblue,lower=lowercol,shadow=false]{#1}
-}
-{
-\end{beamerboxesrounded}
-}
-
-\newenvironment{graybox}[1]
-{
-\setbeamercolor{uppergray}{fg=white,bg=pacificgray}
-\setbeamercolor{lowercol}{fg=black,bg=pacificcream}
-\begin{beamerboxesrounded}[upper=uppergray,lower=lowercol,shadow=true]{#1}
-}
-{
-\end{beamerboxesrounded}
-}
-
-\newenvironment{grassgreenbox}[1]
-{
-\setbeamercolor{uppergrass}{fg=white,bg=grassgreen}
-\setbeamercolor{lowercol}{fg=black,bg=pacificcream}
-\begin{beamerboxesrounded}[upper=uppergrass,lower=lowercol,shadow=true]{#1}
-}
-{
-\end{beamerboxesrounded} 
-}
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
 
 \mode
 <all>
