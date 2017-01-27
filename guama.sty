@@ -1,4 +1,4 @@
-% Copyright 2007 by Till Tantau
+% Copyright 2004 by Madhusudan Singh <madhusudan.singh@gmail.com>
 %
 % This file may be distributed and/or modified
 %
@@ -7,21 +7,31 @@
 %
 % See the file doc/licenses/LICENSE for more details.
 
+\definecolor{maincolor}{rgb}{0.03, 0.73, 0.53}
+\definecolor{warmblack}{rgb}{0.00, 0.26, 0.27}
+\definecolor{outerspace}{rgb}{0.25, 0.31, 0.36}
+\definecolor{iceberg}{rgb}{0.45, 0.70, 0.80}
+
 \mode<presentation>
 
-\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
-\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75!black}
-\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=structure.fg!50!black}
-\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+\setbeamercolor{section in toc}{fg=black,bg=white}
+\setbeamercolor{alerted text}{fg=maincolor!80!gray}
+\setbeamercolor*{palette primary}{fg=maincolor!60!black,bg=gray!30!white}
+\setbeamercolor*{palette secondary}{fg=maincolor!70!black,bg=gray!15!white}
+\setbeamercolor*{palette tertiary}{bg=maincolor!80!black,fg=gray!10!white}
+\setbeamercolor*{palette quaternary}{fg=maincolor,bg=gray!5!white}
 
-\setbeamercolor*{sidebar}{use=structure,bg=structure.fg}
-  
-\setbeamercolor*{palette sidebar primary}{use=structure,fg=structure.fg!10}
+\setbeamercolor*{sidebar}{fg=maincolor,bg=gray!15!white}
+
+\setbeamercolor*{palette sidebar primary}{fg=maincolor!10!black}
 \setbeamercolor*{palette sidebar secondary}{fg=white}
-\setbeamercolor*{palette sidebar tertiary}{use=structure,fg=structure.fg!50}
-\setbeamercolor*{palette sidebar quaternary}{fg=white}
+\setbeamercolor*{palette sidebar tertiary}{fg=maincolor!50!black}
+\setbeamercolor*{palette sidebar quaternary}{fg=gray!10!white}
 
-\setbeamercolor*{titlelike}{parent=palette primary}
+%\setbeamercolor*{titlelike}{parent=palette primary}
+\setbeamercolor{titlelike}{fg=white, bg=outerspace}
+\setbeamercolor{frametitle}{fg=white, bg = outerspace}%bg=gray!10!white}
+\setbeamercolor{frametitle right}{bg=gray!60!white}
 
 \setbeamercolor*{separation line}{}
 \setbeamercolor*{fine separation line}{}
